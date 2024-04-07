@@ -1,0 +1,192 @@
+uuid: 57fdd207-0e64-4459-8043-87d6652c7a2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.task.field_assigned_to
+    - field.field.node.task.field_description
+    - field.field.node.task.field_due_date
+    - field.field.node.task.field_parent_task
+    - field.field.node.task.field_project
+    - field.field.node.task.field_task_status
+    - node.type.task
+    - views.view.tasks
+  module:
+    - datetime
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 67-33
+        components:
+          6c3f4523-90ca-4baf-9bfc-760f8f798be7:
+            uuid: 6c3f4523-90ca-4baf-9bfc-760f8f798be7
+            region: first
+            configuration:
+              id: 'field_block:node:task:field_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          5bef5edc-4b64-4f33-a790-0ab8999aaa7e:
+            uuid: 5bef5edc-4b64-4f33-a790-0ab8999aaa7e
+            region: second
+            configuration:
+              id: 'field_block:node:task:field_task_status'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          2f42f278-ded0-47b2-8eeb-d90ce95f4cf4:
+            uuid: 2f42f278-ded0-47b2-8eeb-d90ce95f4cf4
+            region: second
+            configuration:
+              id: 'field_block:node:task:field_assigned_to'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          0d7e7504-3982-4b8c-b2e9-80d1b9ef41bd:
+            uuid: 0d7e7504-3982-4b8c-b2e9-80d1b9ef41bd
+            region: second
+            configuration:
+              id: 'field_block:node:task:field_due_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          d1c634e9-173a-4f9e-9964-c03c49e2aa41:
+            uuid: d1c634e9-173a-4f9e-9964-c03c49e2aa41
+            region: second
+            configuration:
+              id: 'field_block:node:task:field_project'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          1cda9391-c66c-4c8e-b26b-59d12952efbe:
+            uuid: 1cda9391-c66c-4c8e-b26b-59d12952efbe
+            region: content
+            configuration:
+              id: 'views_block:tasks-tasks_by_parent_task'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.task.full
+targetEntityType: node
+bundle: task
+mode: full
+content:
+  field_assigned_to:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_due_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_parent_task:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_project:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_task_status:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

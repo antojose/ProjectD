@@ -1,0 +1,8 @@
+uuid: a5c24ecb-8228-46ab-8d43-5ad9fb93202a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Task status'
+vid: task_status
+description: ''
+weight: 0
